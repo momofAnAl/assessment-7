@@ -3,25 +3,40 @@ Timing Information:
 
 Extra Large Array
 -----------------
-Time to run code with push():
-Time to run code with unshift():
+Time to run code with push(): 2.545292 ms
+Time to run code with unshift(): 622.975041 ms
 
 Large Array
 -----------
-Time to run code with push():
-Time to run code with unshift():
+Time to run code with push(): 367 μs
+Time to run code with unshift(): 5.307 ms
 
 Medium Array
 ------------
-Time to run code with push():
-Time to run code with unshift():
+Time to run code with push(): 73.333 μs
+Time to run code with unshift(): 110.334 μs
 
 Small Array
 -----------
-Time to run code with push():
-Time to run code with unshift():
+Time to run code with push(): 49.625 μs
+Time to run code with unshift(): 19.833 μs
 
 Tiny Array
 ----------
-Time to run code with push():
-Time to run code with unshift():
+Time to run code with push(): 41.375 μs
+Time to run code with unshift(): 13.625 μs
+
+The times are presented in different units: milliseconds (ms) and microseconds (μs). 
+Microseconds are a smaller unit of time than milliseconds.
+it seems that push() is faster than unshift() for all array sizes.
+This is because push() adds elements to the end of the array, 
+which typically requires less computational effort compared to 
+adding elements to the beginning of the array (unshift()).
+
+As the array size increases, the time taken for both operations 
+(push() and unshift()) also increases.
+For smaller arrays (Small Array and Tiny Array), 
+the time differences between push() and unshift() are relatively small compared to larger arrays.
+For Extra Large Array,  the performance gap between using push() and unshift() is 
+most noticeable or significant.
+
