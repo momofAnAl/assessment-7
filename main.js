@@ -10,6 +10,8 @@ function sumtoZero(nums){
     }
     return false;
 }
+const testsumtoZero = [1,2,3,4,5,-4];
+console.log(sumtoZero(testsumtoZero));
 //Space complexity: O(n)
 // Runtime complexity: O(n), n this the length of input array,
 //and it has loop through each element in the array once.
@@ -26,6 +28,9 @@ function uniqCharacters(word){
     }
     return true;
 }
+const testuniqChar = ("Jerry");
+console.log(uniqCharacters(testuniqChar));
+
 //Space complexity: O(n) because the function creates a new Set to store characters from the input word.
 //Runtime complexity: O(n) since it loops through each character of the word once
 //and each operation within the loop has a constant time complexity, n is the length 
@@ -35,17 +40,18 @@ function uniqCharacters(word){
 function pangramSentence(sentence){
     //to check if all letters are case sensitive
     let alphabet ='abcdefghijklmnopqrstuvwxyz';
-    let lowercaseSentence = sentence.toLowercase();
+    let lowercaseSentence = sentence.toLowerCase();
 
-    let storeLetters = {};
-    for(let char of lowercaseSentence){
-        if(lowercaseSentence.indexOf(alphabet[i]) === -1){
+    for(let char of alphabet){
+        if(lowercaseSentence.indexOf(char) === -1){
             return false;
         }
             
     }
     return true; 
 }
+const testSentence = "The quick brown fox jumps over the lazy dog.";
+console.log(pangramSentence(testSentence));
 //Space complexity: O(n) 
 //Runtime complexity: O(n)
 
@@ -53,13 +59,14 @@ function pangramSentence(sentence){
 function find_longest_word(words){
     let longestWord = 0;
 
-    for(let i=0; i<longestWord.length; i++){
-        let word = word[i];
+    for(let word of words){
         if(word.length > longestWord){
             longestWord = word.length;
         }
     }
     return longestWord;
 }
+const testfindLongestWord = ["apple", "watermelon", "pineapple", "strawberry"];
+console.log(find_longest_word(testfindLongestWord));
 //Space complexity: O(1) constannt because function only use fixed space to store the longestWord
 //Runtime complexity: 0(n) 
